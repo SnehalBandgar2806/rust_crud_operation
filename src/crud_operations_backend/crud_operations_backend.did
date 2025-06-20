@@ -1,0 +1,7 @@
+type Variable = record { id : nat64; value : text; name : text };
+service : {
+  create_variable : (text, text) -> (Variable);
+  delete_variable : (nat64) -> (bool);
+  get_all_variables : () -> (vec Variable) query;
+  update_variable : (nat64, text) -> (opt Variable);
+}
